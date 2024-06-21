@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  background-image: url('background.png'); /* Ensure the path is correct */
+  background-size: contain; /* Change from cover to contain if you want the image to be fully visible */
+  background-repeat: no-repeat; /* Ensure the image does not repeat */
+  background-position: center;
+  height: 100vh; /* Ensure it covers the whole view */
+  overflow: hidden; /* Prevent scrollbars */
+  padding-top: 20px; /* Adjust padding to center the wheel nicely */
+}
+
+.wheel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wheel {
+  width: 300px; /* Adjust the size as needed */
+  height: 300px;
+  position: relative;
+  transition: transform 5s cubic-bezier(0.33, 1, 0.68, 1); /* Smooth animation */
+}
+
+.wheel-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.spin-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px; /* Increased padding for a larger button */
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  border: none;
+}
+
+.spin-button img {
+  width: 100px; /* Increased size of the image */
+  height: 100px; /* Increased size of the image */
+}
+
+.spin-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
